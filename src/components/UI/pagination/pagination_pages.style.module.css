@@ -1,0 +1,20 @@
+
+
+.wrap_pages {
+    margin-top: 30px;
+    display: flex;
+}
+
+.page_link {
+    font-size: 16px;
+    text-decoration: underline;
+    color:  #a1a1da;
+    padding: 10px;
+    border: 1px solid #a1a1da;
+    cursor: pointer;
+}
+
+.page_link.current_page {
+    border: 1px solid rgba(162, 208, 201, 0.6);
+    background:rgba(162, 208, 201, 0.6) ;
+}

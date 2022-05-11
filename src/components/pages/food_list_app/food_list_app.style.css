@@ -1,0 +1,26 @@
+
+
+.food_list_page_wrap {
+    display: flex;
+    justify-content: center;
+
+    padding: 0px 20px;
+    box-sizing: border-box;
+}
+
+.divider {
+    width: 100%;
+    height: 2px;
+    background: #a1a1da;
+    margin: 20px 0px;
+}
+
+
+.post {
+    display: flex;
+    padding: 15px;
+    border: 2px solid aqua;
+    margin-top: 15px;
+    justify-content: space-between;
+    align-items: center;
+}
