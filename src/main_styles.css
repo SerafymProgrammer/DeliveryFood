@@ -22,7 +22,14 @@ body {
 }
 
 .App {
-    width: 80vw;
+    /*width: 80vw;*/
     /*max-height: 100%;*/
     /*pointer-events: none;*/
+}
+
+
+
+.wrap_authed_part {
+    display: grid;
+    grid-template-columns: 1fr;
 }

@@ -7,7 +7,7 @@ import './main_styles.css';
 const MainAppComponent = () => {
     return (
         <BrowserRouter>
-            <MainHeaderComponent/>
+
                 <MainAppRouter/>
             </BrowserRouter>
     );

@@ -2,13 +2,14 @@ import React, {useState} from 'react';
 import cl from './main_header.style.module.css'
 import {Link} from "react-router-dom";
 import {route_links} from "./main_header.consts";
+import logo from '../../assets/images/logo.jpeg'
 
 const MainHeaderComponent = () => {
     const [curr_path, set_curr_path] = useState('home')
     return (
         <div className={cl.wrap_header}>
             <div className={cl.wrap_logo}>
-
+                <img src={logo} className={cl.logo}/>
             </div>
 
             <div className={cl.wrap_menu}>

@@ -1,16 +1,18 @@
 import React from 'react';
 import {useEffect, useState} from "react";
 import {useFetchHook} from "../../../../../../hooks/use_fetch/use_fetch.hook";
-import PostService from "./posts/post_service/post_service.service";
+import PostService from "./dishes/dish_service/post_service.service";
 import {get_page_count} from "../../../../../../utils/pagination";
 import {usePosts} from "../../../../../../hooks/use_posts/use_posts.hook";
 import MyButtonComponent from "../../../../../UI/ui_button/ui_button.component";
 import UiModalComponent from "../../../../../UI/ui_modal/ui_modal.component";
-import PostFormComponent from "./posts/post_form/post_form.component";
+import PostFormComponent from "./dishes/dish_form/post_form.component";
 import DividerComponent from "../../../../../UI/ui_divider/divider.component";
-import PostsFilterComponent from "./posts/posts_filter/posts_filter.component";
-import PostListComponent from "./posts/post_list/post_list.component";
+import PostsFilterComponent from "./dishes/dishes_filter/posts_filter.component";
+import PostListComponent from "./dishes/dish_list/dish_list.component";
 import PaginationPagesComponent from "../../../../../UI/pagination/pagination_pages.component";
+import cl from './food_list_page.style.module.css'
+
 
 const FoodListPageComponent = () => {
 
@@ -70,18 +72,18 @@ const FoodListPageComponent = () => {
 
     return (
 
-        <div className="">
+        <div className={cl.food_list_page_block}>
             <div style={{marginTop: 30, display: 'flex', justifyContent: 'space-between'}}>
                 <MyButtonComponent
                     onClick={()=>set_show_modal(true)}
                 >
                     Create post
                 </MyButtonComponent>
-                <MyButtonComponent
-                    onClick={fetching_posts}
-                >
-                    Get posts
-                </MyButtonComponent>
+                {/*<MyButtonComponent*/}
+                {/*    onClick={fetching_posts}*/}
+                {/*>*/}
+                {/*    Get dishes*/}
+                {/*</MyButtonComponent>*/}
             </div>
 
             <UiModalComponent
@@ -89,7 +91,7 @@ const FoodListPageComponent = () => {
                 visible={show_modal}>
                 <PostFormComponent create_post={create_post}/>
             </UiModalComponent>
-            <DividerComponent />
+            {/*<DividerComponent />*/}
             <PostsFilterComponent
                 filter={filters}
                 set_filter={set_filters}
@@ -97,9 +99,9 @@ const FoodListPageComponent = () => {
             <PostListComponent
                 is_error={error_posts}
                 is_loading={is_posts_loading}
-                posts={searched_and_sorted_posts}
+                dishes={searched_and_sorted_posts}
                 remove_post={remove_post}
-                title={'List of the posts'}
+                // title={'List of the dishes'}
             />
 
             <PaginationPagesComponent
